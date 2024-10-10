@@ -13,7 +13,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import javax.naming.Context;
 import javax.sql.DataSource;
 import java.sql.Connection;
 
@@ -43,16 +42,16 @@ public class SampleTest {
 
     @Test
     public void setSampleServiceTest(){
-        log.info("setSampleServiceTest");
+        log.info(sampleService);
     }
 
-//    @Test
-//    public void testSample1(){
-//        log.info(sampleDTO1);
-//    }
+    @Test
+    public void testSample1(){
+       // log.info(sampleDTO1);
+    }
 
     @Test
-    public void testSamaple(){
+    public void testSample(){
         SampleDTO dto = new SampleDTO();
         dto.setAge(20);
         dto.setName("박경미");
