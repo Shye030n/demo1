@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
-@ToString
+@ToString // 해당 클래스의 모든 필드 값 및 문자열 표현을 자동 생성.
 public class SampleService {
     @Autowired
     private SampleDAO sampleDAO;

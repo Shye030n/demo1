@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc
+       https://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <mvc:annotation-driven></mvc:annotation-driven>
+    <!--mvc:annotation 선택할 때 꼭 마지막에 mvc있는 거 선택하기-->
+    <mvc:resources mapping="/resource/**"  location="/resources/**"></mvc:resources>
+    <!--/recources/** staticFile 저장하는 곳.-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+
+        <property name="prefix" value="/WEB-INF/views/"></property>
+        <property name="suffix" value=".jsp"></property>
+    <!--앞으로 컨트롤러를 만들건데 저장위치 및 파일명-->
+    </bean>
+    <context:component-scan base-package="com.sh.springdemo.controller"/>
+    <!--  자동으로 컴포넌트를 찾아서 빈으로 만들어줄게.-->
+</beans>
