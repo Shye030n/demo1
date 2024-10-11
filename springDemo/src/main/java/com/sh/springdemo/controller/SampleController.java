@@ -78,11 +78,12 @@ public class SampleController {
         model.addAttribute("name", name);
     }
 
-    @GetMapping("/ex06")
+
     //CommonExceptionAdvice.java랑 비교
-    //http://localhost:8080/ex6?p1=a&p2=5 여기로 접속
-    //http://localhost:8080/ex6?p1=a&p2=b 이렇게 치면 에러나야되는데 나는 왜 에러가 안나지..?
-    public void ex6(@RequestParam ("p1") String p1,
+    //http://localhost:8080/ex06?p1=a&p2=5 여기로 접속
+    //http://localhost:8080/ex06?p1=a&p2=b 이렇게 치면 에러나야되는데 나는 왜 에러가 안나지..?
+    @GetMapping("/ex06")
+    public void ex6(@RequestParam("p1") String p1,
                     @RequestParam("p2") int p2){
         log.info("ex6");
         log.info(p1);
