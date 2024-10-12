@@ -87,6 +87,7 @@ public class SampleController {
         log.info("ex6");
         log.info(p1);
         log.info(p2);
+
     }
 
 }
